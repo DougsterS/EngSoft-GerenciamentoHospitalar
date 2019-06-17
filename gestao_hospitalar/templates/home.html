@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina Inicial</title>
+    <a href="{% url 'logout' %}">Sair</a>
+</head>
+<body>
+    <li>
+        <a href="{% url 'ListaMedicos' %}">Medicos</a>
+        <a href="{% url 'ListaPacientes' %}">Pacientes</a>
+        <a href="{% url 'ListaEnfermidades' %}">Doencas</a>
+        <a href="{% url 'ListaMedicamentos' %}">Medicamentos</a>
+        <a href="{% url 'ListaEquipamentos' %}">Equipamentos</a>
+    </li>
+
+</body>
+</html>

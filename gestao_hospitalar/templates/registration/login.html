@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina de Login</title>
+</head>
+<body>
+    <h1>LOGIN PAGE</h1>
+    <form method="POST">
+        {%csrf_token%}
+        {{form.as_p}}
+        <button type="submit">Logar</button>
+    </form>
+</body>
+</html>
