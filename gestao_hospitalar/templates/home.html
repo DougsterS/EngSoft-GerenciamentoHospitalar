@@ -6,13 +6,18 @@
     <a href="{% url 'logout' %}">Sair</a>
 </head>
 <body>
-    <li>
-        <a href="{% url 'ListaMedicos' %}">Medicos</a>
-        <a href="{% url 'ListaPacientes' %}">Pacientes</a>
-        <a href="{% url 'ListaEnfermidades' %}">Doencas</a>
-        <a href="{% url 'ListaMedicamentos' %}">Medicamentos</a>
-        <a href="{% url 'ListaEquipamentos' %}">Equipamentos</a>
-    </li>
+    {%if user.is_authenticated%}
+        <li>
+            <a href="{% url 'ListaMedicos' %}">Medicos</a>
+            <a href="{% url 'ListaPacientes' %}">Pacientes</a>
+            <a href="{% url 'ListaEnfermidades' %}">Doencas</a>
+            <a href="{% url 'ListaMedicamentos' %}">Medicamentos</a>
+            <a href="{% url 'ListaEquipamentos' %}">Equipamentos</a>
+        </li>
+        <p>Seja bem-vindo {{ user.username }}</p>
+    {%else%}
+        <a href="{% url 'login' %}">Logar</a>
+    {%endif%}
 
 </body>
 </html>
