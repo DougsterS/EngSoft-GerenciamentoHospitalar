@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deletar</title>
+</head>
+<body>
+    <h1>Deseja realmente deletar {{variavel.nome}}?</h1>
+    <form method="POST">
+        {%csrf_token%}
+        {{ form }}
+        <button type="submit">Deletar Informações</button>
+        <a href="javascript:window.history.go(-1)">VOLTAR!</a>
+    </form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Equipamentos</title>
+</head>
+<body>
+    <ul>
+        {% for registros in variavel %}
+            <li>
+                <a href="{% url 'AtualizarEquipamentos' registros.id %}">{{registros.nome}}</a>
+                <a href="{% url 'DeletarEquipamentos' registros.id %}">Deletar Equipamento</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{%url 'CriarEquipamentos'%}">Novo Equipamento</a>
+</body>
+</html>

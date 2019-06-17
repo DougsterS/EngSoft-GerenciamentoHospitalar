@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Pacientes</title>
+</head>
+<body>
+    <ul>
+        {% for registros in variavel %}
+            <li>
+                <a href="{% url 'AtualizarPacientes' registros.id %}">{{registros.nome}} {{registros.sobrenome}}</a>
+                <a href="{% url 'DeletarPacientes' registros.id %}">Deletar Paciente</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{%url 'CriarPacientes'%}">Novo Paciente</a>
+</body>
+</html>

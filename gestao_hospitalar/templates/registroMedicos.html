@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Registros Medicos</title>
+</head>
+<body>
+    <ul>
+        {% for registros in variavel %}
+            <li>
+                <a href="{% url 'AtualizarMedicos' registros.id %}">{{registros.nome}} {{registros.sobrenome}}</a>
+                <a href="{% url 'DeletarMedicos' registros.id %}">Deletar Médico</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{%url 'CriarMedicos'%}">Novo Medico</a>
+</body>
+</html>
